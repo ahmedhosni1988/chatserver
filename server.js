@@ -10,7 +10,7 @@ var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
 
-app.use(express.static(publicpath));
+//app.use(express.static(publicpath));
 
 io.on('connection',(socket)=>{
     console.log('New user connected');
@@ -27,5 +27,4 @@ io.on('connection',(socket)=>{
 server.listen(port,() =>{
     console.log(`Server is up on port ${port}`);
 })
-console.log(__dirname+'/../public');
-console.log(publicpath);
+
