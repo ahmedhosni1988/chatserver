@@ -10,9 +10,9 @@ var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
 
-app.get('/node', function(req, res){
-    res.sendFile(__dirname + '/index.html');
-  });
+// app.get('/node', function(req, res){
+//     res.sendFile(__dirname + '/index.html');
+//   });
 
 app.use(express.static(publicpath));
 
