@@ -30,7 +30,7 @@ io.on('connection',(socket)=>{
     });
     
     socket.on('send',(message)=>{
-        socket.emit('message',message);
+        io.emit('message',message);
        
     });
 
