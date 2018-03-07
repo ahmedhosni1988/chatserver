@@ -1,4 +1,5 @@
 const path = require('path');
+
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
@@ -22,6 +23,17 @@ io.on('connection',(socket)=>{
     socket.on('disconnect',()=>{
         console.log('user disconnected');
     });
+
+
+    socket.on('onopen',()=>{
+        console.log('user disconnected');
+    });
+    
+    socket.on('send',(message)=>{
+        socket.emit('message',message);
+       
+    });
+
 
     
 
