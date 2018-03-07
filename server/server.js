@@ -25,8 +25,8 @@ io.on('connection',(socket)=>{
     });
 
 
-    socket.on('onopen',()=>{
-        console.log('user disconnected');
+    socket.on('connect',()=>{
+        io.emit('message',message);
     });
     
     socket.on('send',(message)=>{
